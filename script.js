@@ -1,3 +1,4 @@
+
 Shery.imageEffect(".back", {
   Style: 5,
   // debug: true,
@@ -34,9 +35,8 @@ elems.forEach(function (elem) {
 
   let animating = false;
 
-
   document.querySelector(".main").addEventListener("click", function () {
-    if(!animating){
+    if (!animating) {
       animating = true;
       gsap.to(h1s[index], {
         top: "-=100%",
@@ -44,18 +44,18 @@ elems.forEach(function (elem) {
         duration: 1,
         onComplete: function () {
           gsap.set(this._targets[0], { top: "100%" });
-          animating = false
+          animating = false;
           // console.log(this)
         },
       });
-  
+
       index === h1s.length - 1 ? (index = 0) : index++;
-  
+
       gsap.to(h1s[index], {
         top: "-=100%",
         ease: Expo.easeInOut,
         duration: 1,
       });
-    } 
+    }
   });
 });
