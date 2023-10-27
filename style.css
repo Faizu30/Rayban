@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: "Gilroy", sans-serif;
 }
+@font-face {
+  font-family: kajiro;
+  src: url(./Kajiro\ Bold.ttf);
+}
 html,
 body {
   height: 100%;
